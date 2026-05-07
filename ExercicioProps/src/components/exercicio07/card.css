@@ -1,0 +1,7 @@
+.container{
+    margin: 0 auto;
+    background-color: salmon;
+    border: 3px dashed red;
+    border-radius: 5px;
+    padding: 20px;
+}
