@@ -1,0 +1,6 @@
+{
+    "frutas" : [
+        {"id": 1, "nome": "Abacaxi", "quantidade": 10},
+        {"id": 2, "nome": "Banana", "quantidade": 19}
+    ]
+}
