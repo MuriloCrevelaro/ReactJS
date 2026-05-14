@@ -7,7 +7,8 @@ export default function Header(){
             <nav>
                 <Link to="/">Home</Link> {"|"}
                 <Link to="/quemsomos">Quem Somos</Link> {"|"}
-                <Link to="/cadastrofrutas">Cadastro de frutas</Link>
+                <Link to="/cadastrofrutas">Cadastro de frutas</Link> {"|"}
+                <Link to="/produtos">Produtos</Link>
             </nav>
         </header>
     )
