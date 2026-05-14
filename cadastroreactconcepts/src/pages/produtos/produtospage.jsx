@@ -74,7 +74,7 @@ export const ProdutosPage = () => {
     const deletar = async (id) => {
         try{
             //fazer o fetch para apagar
-            const retornoAPI = await fetch(`http://localhost:3000/produtos/{id}`,{
+            const retornoAPI = await fetch(`http://localhost:3000/produtos/${id}`,{
                 method: "DELETE"
             })
 

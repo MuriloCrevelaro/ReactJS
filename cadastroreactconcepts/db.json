@@ -59,13 +59,6 @@
       "preco": "44",
       "imagem": "hero.png",
       "id": "YCv-3nVZYOg"
-    },
-    {
-      "titulo": "Coca cola",
-      "descricao": "Latinha de coca cola",
-      "preco": "10.3",
-      "imagem": "hero.png",
-      "id": "mDUsPXlKrtQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
