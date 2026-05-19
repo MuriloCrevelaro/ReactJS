@@ -42,6 +42,7 @@
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .lista-produtos{
@@ -58,7 +59,7 @@
 
 .card-produto{
     width: 250px;
-    background-color: white;
+    background-color: black;
     border-radius: 16px;
     overflow: hidden;
 

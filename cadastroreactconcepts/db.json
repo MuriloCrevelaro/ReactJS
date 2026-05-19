@@ -13,6 +13,20 @@
       "preco": "179.99",
       "imagem": "https://www.bing.com/images/search?view=detailV2&ccid=H7LJ1Cul&id=6D11B13D3F8D7EADBFAB059132C9D39B2C51F183&thid=OIP.H7LJ1Cul50ovIOJVA4U8uAHaHa&mediaurl=https%3A%2F%2Fdown-br.img.susercontent.com%2Ffile%2Fbr-11134207-7r98o-m6ppg64yqa1zbf&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.1fb2c9d42ba5e74a2f20e25503853cb8%3Frik%3Dg%252fFRLJvTyTKRBQ%26pid%3DImgRaw%26r%3D0&exph=800&expw=800&q=perfume+clash&ck=52CFA154383FA9306BBC9918F4A33413&selectedindex=0&itb=0&ajaxhist=0&ajaxserp=0&pivotparams=insightsToken%3Dccid_H7LJ1Cul*cp_52CFA154383FA9306BBC9918F4A33413*mid_6D11B13D3F8D7EADBFAB059132C9D39B2C51F183*thid_OIP.H7LJ1Cul50ovIOJVA4U8uAHaHa&vt=0&sim=11&iss=VSI&ajaxhist=0&ajaxserp=0&shtc=0&shth=OIP.H7LJ1Cul50ovIOJVA4U8uAHaHa&shsc=idp&form=EX0050&shid=c3bc2041-d633-4e36-ba83-2449fc0791f3&shtp=GetUrl&shtk=Q2xhc2ggQ29sw7RuaWEgTWFzY3VsaW5hIC0gMTAwbWwgKFBlcmZ1bWUgT3JpZ2luYWwgTyBCb3RpY8OhcmlvKSB8IFNob3BlZSAuLi4%3D&shdk=RW5jb250cmFkbyBubyBCaW5nIGVtIHNob3BlZS5jb20uYnI%3D&shhk=pvf0cFTnvz%2Bd9h39PScrpLApeo5jKm9jd58hAbA9xi0%3D",
       "id": "dLnsQkCAg-0"
+    },
+    {
+      "titulo": "Calça 2",
+      "descricao": "Uma calça cargo cor de bege",
+      "preco": "2000",
+      "imagem": "https://m.media-amazon.com/images/I/51rxcqNec8L._AC_SY606_.jpg",
+      "id": "iszgGpS5YP4"
+    },
+    {
+      "titulo": "Cumputador",
+      "descricao": "Um notbook daora",
+      "preco": "450",
+      "imagem": "https://m.media-amazon.com/images/I/61ZLNgls9fL._AC_SX679_.jpg",
+      "id": "ZkHamCnbtys"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
