@@ -94,38 +94,46 @@ export const ProdutosPage = () => {
     }
 
     return (
-        <>  
-        <h1>Página de Produtos</h1>
+        <div className="produtos-page">
+        <h1>Cosméticos</h1>
 
         <form action="" onSubmit={cadastrar}>
+            <fieldset className="cadastro-caixa">
             <div className="linha">
                 <label htmlFor="titulo"></label>
-                <input type="text" placeholder="titulo" id="titulo" onChange={(e) => {
+                <input className= "input-produto" type="text" placeholder="titulo" id="titulo" onChange={(e) => {
                     setTitulo(e.target.value)
                 }}/>
             </div>
             <div className="linha">
                 <label htmlFor="preco"></label>
-                <input type="text" placeholder="preco" id="preco" onChange={(e) => {
+                <input className= "input-produto" type="text" placeholder="preco" id="preco" onChange={(e) => {
                     setPreco(e.target.value)
                 }}/>
             </div>            
             <div className="linha">
                 <label htmlFor="descricao"></label>
-                <input type="text" placeholder="descricao" id="descricao" onChange={(e) => {
+                <input className= "input-produto" type="text" placeholder="descricao" id="descricao" onChange={(e) => {
                     setDescricao(e.target.value)
                 }}/>
             </div> 
+            <div className="linha">
+                <label htmlFor="img"></label>
+                <input className= "input-produto" type="text" placeholder="img" id="img" onChange={(e) => {
+                    setImagem(e.target.value)
+                }}/>
+            </div> 
             <br />
-            <button>Cadastrar</button>
+            <button className="btn-cadastrar">Cadastrar</button>
+            </fieldset>
         </form>
        
         <br />
-        <section className="lista-produto">
+        <section className="lista-produtos">
             {listaProdutos.map((p) => {
                 return(
                     <article key={p.id} className="card-produto">
-                        <img className="foto-produto" src={fotoProduto} alt="" />
+                        <img className="foto-produto" src={p.imagem} alt="" />
                         <h2>{p.titulo}</h2>
                         <p>{p.preco}</p>
                         <p>{p.descricao}</p>
@@ -137,6 +145,6 @@ export const ProdutosPage = () => {
                 )
             })}
         </section>
-        </>
+        </div>
     )
 }
