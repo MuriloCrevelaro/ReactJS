@@ -8,15 +8,10 @@ import CadastroGenero from "../pages/cadastroGenero/CadastroGenero"
 const Rotas = () => {
     return(
         <BrowserRouter>
-            <nav>
-                <Link to="/">Login</Link> {" "}
-                <Link to="/filme">Filmes</Link> {" "}
-                <Link to="/genero">Gênero</Link> {" "}
-            </nav>
             <Routes>
                 <Route element={<Login />} path="/"/>
-                <Route element={<CadastroFilme />} path="/filme"/>
-                <Route element={<CadastroGenero />} path="/genero"/> 
+                <Route element={<CadastroFilme />} path="/filmes"/>
+                <Route element={<CadastroGenero />} path="/generos"/> 
             </Routes>
         </BrowserRouter>
     )

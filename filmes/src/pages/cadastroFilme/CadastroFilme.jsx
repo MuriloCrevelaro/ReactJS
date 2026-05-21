@@ -1,11 +1,18 @@
 import "./CadastroFilme.css"
 import Headers from "../../components/header/Header"
+import Footer from "../../components/footer/Footer"
+import Cadastro from "../../components/cadastro/Cadastro"
 
 const CadastroFilme = () => {
     return(
         <>
             <Headers />
-            <h1>Cadastro de Filme</h1>
+                <main>
+                    <Cadastro 
+                        tituloCadastro="Cadastro de Filme"
+                    />    
+                </main>  
+            <Footer />
         </>
     )
 }

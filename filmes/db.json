@@ -1,0 +1,13 @@
+{
+  "Genero": [
+    {
+      "id": "1",
+      "nome": "Romance"
+    },
+    {
+      "nome": "Comédia",
+      "id": "JlU441uWzPQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
