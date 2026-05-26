@@ -1,12 +1,28 @@
 {
   "Genero": [
     {
-      "id": "1",
-      "nome": "Romance"
+      "nome": "Romance2",
+      "id": "1"
     },
     {
       "nome": "Comédia",
       "id": "JlU441uWzPQ"
+    },
+    {
+      "nome": "Comédia 2",
+      "id": "pknn52DMnMo"
+    },
+    {
+      "nome": "Teste1",
+      "id": "FQ3hvI7XT1U"
+    },
+    {
+      "nome": "Romance3",
+      "id": "xug11lpW14I"
+    },
+    {
+      "nome": "Morte2",
+      "id": "fwrAMUPi8f4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
