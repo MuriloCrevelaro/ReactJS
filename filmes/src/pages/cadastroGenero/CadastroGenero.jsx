@@ -16,7 +16,7 @@ const CadastroGenero = () => {
     const [listaGeneros, setListaGeneros] = useState([
         {idGenero : 1, nome: "Ação"},
         {idGenero : 2, nome: "Romance"}
-    ])
+    ])  
 
     // Cilclo de vida e funções
 
@@ -44,26 +44,29 @@ const CadastroGenero = () => {
             const retornoAPI = await api.post("/Genero", objCadastro)
 
             if(retornoAPI.status == 201){
-                Swal.fire({
+                Alerta({
                     title: "Cadastro de gênero",
                     text: `Gênero ${objCadastro.nome} cadastrado com sucesso!`,
-                    icon: "success"
+                    icon: "success",
+                    confirmButtonText: "Ok"
                 })
                 //Limpar os campos
                 limparFormulario()
                 //Chamar o get
             } else {
-                Swal.fire({
+                Alerta({
                     title:"Cadastro de Gênero",
                     text: "Houve algum problema ao cadastrar!",
-                    icon:"error"
+                    icon:"error",
+                    confirmButtonText: "Ok"
                 })
             }
         } catch (error) {
-            Swal.fire({
+            Alerta({
                 title:"Cadastro de Gênero",
                 text:"Erro na chamada da API",
-                icon:"error"
+                icon:"error",
+                confirmButtonText: "Ok"
             })
             console.log(error)
         }
@@ -80,7 +83,7 @@ const CadastroGenero = () => {
 
     const excluirGenero = async (item) =>{
         console.log(item)
-        const result = await Swal.fire({
+        const result = await Alerta({
             title:"Exclusão de Gênero",
             text:"Apagada com sucesso",
             icon:"info",
@@ -99,10 +102,11 @@ const CadastroGenero = () => {
         
             if(retornoAPI.status == 204 || retornoAPI.status == 200){
                 console.log(retornoAPI)
-                Swal.fire({
+                Alerta({
                     title:"Exclusão de Gênero",
                     text:"Apagada com sucesso",
-                    icon:"success"
+                    icon:"success",
+                    confirmButtonText: "Ok"
                 //     showCancelButton: true,
                 //     confirmButtonColor: "#3085d6",
                 //     cancelButtonColor: "#d33",
@@ -121,10 +125,11 @@ const CadastroGenero = () => {
 
             getGeneros()
         } catch (error) {
-            Swal.fire({
+            Alerta({
                 title:"Exclusão de Gênero",
                 text:"Erro na chamada da API",
-                icon:"error"
+                icon:"error",
+                confirmButtonText: "Ok"
             })
             console.log(error)
         }
@@ -140,10 +145,11 @@ const CadastroGenero = () => {
     const editarGenero = async(e) =>{
         e.preventDefault()
 
-        Swal.fire({
+        Alerta({
                 title:"Edição de Gênero",
                 text:`Cadastra isso logo. Gênero: ${valor} | id: ${idEditar}`,
-                icon:"info"
+                icon:"info",
+                confirmButtonText: "Ok"
         })
 
         const objEditar = {
@@ -153,25 +159,28 @@ const CadastroGenero = () => {
         try{
             const retornoAPI = await api.put(`/Genero/${idEditar}`, objEditar)
             if(retornoAPI.status == 200){
-            Swal.fire({
+            Alerta({
                 title:"Edição de Gênero",
                 text:"Gênero editado com sucesso",
-                icon:"success"
+                icon:"success",
+                confirmButtonText: "Ok"
             })
                 limparFormulario()
                 getGeneros()
             } else {
-                Swal.fire({
+                Alerta({
                 title:"Edição de Gênero",
                 text:"Algum problema aconteceu ao editar",
-                icon:"error"
+                icon:"error",
+                confirmButtonText: "Ok"
             })
             }
         } catch (erro) {
-            Swal.fire({
+            Alerta({
                 title:"Edição de Gênero",
                 text:"Erro ao chamada da API",
-                icon:"error"
+                icon:"error",
+                confirmButtonText: "Ok"
             })
             console.log(erro)
         }
@@ -191,10 +200,11 @@ const CadastroGenero = () => {
             const dados = retornoAPI.data//extrai os dados retornados
             setListaGeneros(dados)//guarda os dados no state(já existe na lista)
         } catch (error) {
-            Swal.fire({
+            Alerta({
                 title:"Listagem de Gênero",
                 text:"Erro ao retornar os dados",
-                icon:"error"
+                icon:"error",
+                confirmButtonText: "Ok"
             })
         }
     }

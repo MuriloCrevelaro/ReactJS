@@ -17,12 +17,28 @@
       "id": "FQ3hvI7XT1U"
     },
     {
-      "nome": "Romance3",
-      "id": "xug11lpW14I"
-    },
-    {
       "nome": "Morte2",
       "id": "fwrAMUPi8f4"
+    },
+    {
+      "nome": "Romance 4",
+      "id": "pJ4y7GLLnQ0"
+    }
+  ],
+  "Filme": [
+    {
+      "titulo": "Sei lá 2",
+      "genero": {
+        "nome": "Sei lá 2"
+      },
+      "id": "M-FYtxl6eHc"
+    },
+    {
+      "titulo": "Carlos",
+      "genero": {
+        "nome": "Carlos"
+      },
+      "id": "IyA0E1NKvww"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

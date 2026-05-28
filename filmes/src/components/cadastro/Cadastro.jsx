@@ -28,9 +28,11 @@ const Cadastro = (props) => {
                         <label htmlFor="genero">Gênero</label>
                         <select name="genero" id="genero">
                             <option value="">Selecione</option>
-                            <option value="1">op 1</option>
-                            <option value="2">op 2</option>
-                            <option value="3">op 3</option>
+                            {props.listaGeneros.map((item) => {
+                                    <option key={item.id} value={item.id}>
+                                        {item.nome}
+                                    </option>
+                            })}
                         </select>
                     </div>
 
