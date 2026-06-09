@@ -1,20 +1,27 @@
-// instalar o pacote react-router-dom
-
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
-import CadastroFilme from "../pages/cadastroFilme/CadastroFilme"
-import Login from "../pages/login/login"
-import CadastroGenero from "../pages/cadastroGenero/CadastroGenero"
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import CadastroFilme from "../pages/cadastroFilme/CadastroFilme";
+import CadastroGenero from "../pages/cadastroGenero/CadastroGenero";
+import Login from "../pages/login/Login";
+import PrivateRoute from "./PrivateRoutes";
 
 const Rotas = () => {
-    return(
-        <BrowserRouter>
-            <Routes>
-                <Route element={<Login />} path="/"/>
-                <Route element={<CadastroFilme />} path="/filmes"/>
-                <Route element={<CadastroGenero />} path="/generos"/> 
-            </Routes>
-        </BrowserRouter>
-    )
-}
+  return (
+    <BrowserRouter>      
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/filme" 
+          element={
+            <PrivateRoute>
+              <CadastroFilme />
+            </PrivateRoute>} />
+        <Route path="/genero"
+          element={
+            <PrivateRoute>
+              <CadastroGenero />
+            </PrivateRoute>} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default Rotas
+export default Rotas;

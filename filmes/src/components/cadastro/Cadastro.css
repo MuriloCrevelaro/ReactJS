@@ -33,7 +33,30 @@
 
     align-items: flex-end;
 }
+.campo_cad_img{
+    display: flex;
+    flex-direction: column;
+}
 
+.campo_cad_img input{
+    display: none;
+}
+
+.custom-file-upload{
+width: 200px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: #73061B;
+    color: white;
+    border-radius: 6px;
+    font-weight: bolder;
+    padding: 10px 15px;
+}
+
+.custom-file-upload:hover{
+    background-color: #5a0415;
+}
 
 /* modificando o input e select */
 .campo_cad_nome input,

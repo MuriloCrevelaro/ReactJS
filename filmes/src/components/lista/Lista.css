@@ -100,5 +100,23 @@
     background: none;
     width: fit-content;
 }
-  
+td[data-cell="Imagem"] img{
+    width: 80px;
+    height: 80px;
 
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    border: solid 2px #73061B;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+    transition: 0.3s;
+}
+
+td[data-cell="Imagem"] img:hover{
+    transform: scale(1.08);
+
+    cursor: pointer;
+}

@@ -3,6 +3,9 @@ import "./Lista.css";
 // Importação de imagens:
 import Editar from "../../assets/img/pen-to-square-solid.svg";
 import Excluir from "../../assets/img/trash-can-regular.svg";
+import Teste from "../../assets/img/fundoLogin.png";
+import { apiPort } from "../../services/services";
+
 
 const Lista = (props) => {
     return (
@@ -17,6 +20,7 @@ const Lista = (props) => {
                         <thead>
                             {/* tr => table row */}
                             <tr className="table_cabecalho">
+                                <th style={{ display: props.visibilidade }}>Imagem</th>
                                 {/* th => table head */}
                                 <th>Nome</th>
                                 <th style={{ display: props.visibilidade }}>Gênero</th>
@@ -30,7 +34,21 @@ const Lista = (props) => {
                             {props.lista && props.lista.length > 0 ? (
                                 // Se houver itens, faz um map (laço) para renderizar cada item da lista
                                 props.lista.map((item) => (
-                                    <tr className="item_lista" key={item.idGenero}>
+                                    <tr
+                                        className="item_lista"
+                                        key={
+                                            props.tipoLista === "genero"
+                                                ? item.idGenero
+                                                : item.idFilme
+                                        }
+                                    >
+                                        <td data-cell="Imagem" style={{ display: props.visibilidade }}>
+                                            <img
+                                                src={`https://localhost:${apiPort}/imagens/${item.imagem}`} // Ajuste a URL conforme necessário
+                                                alt="fundo"
+                                                style={{ display: props.visibilidade }}
+                                            />
+                                        </td>
                                         {/* {console.log(index)} */}
                                         {/* {console.log(item.idGenero)} */}
                                         <td data-cell="Nome">
@@ -41,10 +59,13 @@ const Lista = (props) => {
                                         <td data-cell="Gênero" style={{ display: props.visibilidade }}>
                                             {/* Segunda célula: mostra o nome do gênero caso o tipo da lista seja "filme".*/}
                                             {/* adicionar essa linha depois de fazer o metd de lista filme: */}
-                                            {props.tipoLista === "filme" ? (item.genero?.nome || '-') : '-'}
+                                            {props.tipoLista === "filme" ? (item.idGeneroNavigation?.nome || '-') : '-'}
                                         </td>
                                         <td data-cell="Editar">
-                                            <button className="icon" onClick={() => (props.funcEditar(item))}>
+                                            <button className="icon" onClick={() => {
+                                                props.funcEditar(item)
+                                            }
+                                            }>
                                                 <img src={Editar} alt="Caneta" />
                                             </button>
                                         </td>
@@ -54,16 +75,16 @@ const Lista = (props) => {
                                             </button>
                                         </td>
                                     </tr>
-                                )) 
+                                ))
                             ) : (
-                                    // Caso a lista esteja vazia ou não exista, mostra uma linha dizendo que não há registros
-                                    <tr>
-                                        <td>Nenhum registro encontrado.</td>
-                                    </tr>
-                                )
+                                // Caso a lista esteja vazia ou não exista, mostra uma linha dizendo que não há registros
+                                <tr>
+                                    <td>Nenhum registro encontrado.</td>
+                                </tr>
+                            )
                             }
-                                
-                        
+
+
                         </tbody>
                     </table>
                 </div>
