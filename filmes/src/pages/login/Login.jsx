@@ -1,8 +1,6 @@
 import "./Login.css";
 import Logo from "../../assets/img/logo.svg";
 import Botao from "../../components/botao/Botao";
-import Header from "../../components/header/Header";
-import Fotter from "../../components/footer/Footer";
 import { UsuarioContext } from "../../context/UsuarioContext";
 import { useContext, useState } from "react";
 

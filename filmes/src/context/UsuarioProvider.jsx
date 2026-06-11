@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { UsuarioContext } from "./UsuarioContext"
 
 export const UsuarioProvider = ({children}) => {
